@@ -8,6 +8,7 @@ namespace ChobiAssets.PTM
     public class General_Settings_CS
     {
         // General Function settings.
+        public static bool Allow_Instant_Quit = true;
         public static bool Allow_Reload_Scene = true;
         public static bool Allow_Manual_Respawn = true;
         public static bool Allow_Switch_Cursor = false;
@@ -37,7 +38,7 @@ namespace ChobiAssets.PTM
         public static bool Gun_Camera_While_Pressing = false;
 
         // Scroll Track settings.
-        public static string Main_Tex_Name = "_MainTex";
+        public static string Main_Tex_Name = "_BaseMap";
 
 
         //
@@ -45,9 +46,10 @@ namespace ChobiAssets.PTM
         //
 
         // General Function Keys settings.
-        public static KeyCode Reload_Scene_Key = KeyCode.Backspace;
+        public static KeyCode Reload_Scene_Key = KeyCode.Tab;
+        public static KeyCode Quit_Key = KeyCode.Escape;
         public static KeyCode Switch_Cursor_Key = KeyCode.LeftShift;
-        public static KeyCode Pause_Key = KeyCode.Escape;
+        public static KeyCode Pause_Key = KeyCode.P;
         public static KeyCode Respawn_Key = KeyCode.Return;
         public static KeyCode Switch_Canvas_Key = KeyCode.Delete;
 
