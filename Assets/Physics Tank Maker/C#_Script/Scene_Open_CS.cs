@@ -88,8 +88,7 @@ namespace ChobiAssets.PTM
                     break;
 
                 case 2: // Menu Scene.
-                    newName += "_Menu";
-                    newName = newName.Replace("_01_", "_00_");
+                    newName = "Menu";
                     break;
 
                 case 3: // Battle Scene.

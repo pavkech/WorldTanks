@@ -20,6 +20,10 @@ public class IngameQualitySettings : MonoBehaviour
         _lowButton.onClick.AddListener(SetLowQuality);
         _midButton.onClick.AddListener(SetMidQuality);
         _highButton.onClick.AddListener(SetHighQuality);
+
+        int qualityIndex = YG2.saves.qualityIndex;
+
+        setupQuality(qualityIndex);
     }
 
     private void OnDisable()
@@ -47,7 +51,7 @@ public class IngameQualitySettings : MonoBehaviour
 
     private void SetLowQuality()
     {
-        //YandexGame.savesData.qualityIndex = 0;
+        YG2.saves.qualityIndex = 0;
 
         setupShadowDistance(0);
         MainLightShadowResolution = ShadowResolution._512;
@@ -55,11 +59,13 @@ public class IngameQualitySettings : MonoBehaviour
         dropButtons();
         _lowButton.GetComponent<Image>().color = _chosenQualityButtonColor;
         QualitySettings.globalTextureMipmapLimit = 2;
+
+        YG2.SaveProgress();
     }
 
     private void SetMidQuality()
     {
-        //YandexGame.savesData.qualityIndex = 1;
+        YG2.saves.qualityIndex = 1;
 
         setupShadowDistance(30);
         MainLightShadowResolution = ShadowResolution._512;
@@ -69,11 +75,13 @@ public class IngameQualitySettings : MonoBehaviour
 
         dropButtons();
         _midButton.GetComponent<Image>().color = _chosenQualityButtonColor;
+
+        YG2.SaveProgress();
     }
 
     private void SetHighQuality()
     {
-        //YandexGame.savesData.qualityIndex = 2;
+        YG2.saves.qualityIndex = 2;
 
         setupShadowDistance(50);
         MainLightShadowResolution = ShadowResolution._2048;
@@ -81,6 +89,8 @@ public class IngameQualitySettings : MonoBehaviour
         dropButtons();
         _highButton.GetComponent<Image>().color = _chosenQualityButtonColor;
         QualitySettings.globalTextureMipmapLimit = 0;
+
+        YG2.SaveProgress();
     }
 
     private void setupShadowDistance(int value)

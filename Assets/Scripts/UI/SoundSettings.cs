@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using YG;
 
 public class SoundSettings : MonoBehaviour
 {
@@ -8,11 +9,16 @@ public class SoundSettings : MonoBehaviour
     private void Awake()
     {
         _slider.onValueChanged.AddListener(SetupVolume);
+
+        float volumeSetting = YG2.saves.volumeSetting;
+        _slider.value = volumeSetting;
+        SetupVolume(volumeSetting);
     }
 
     public void SetupVolume(float volume)
     {
         AudioListener.volume = volume;
-        Debug.Log($"Текущая громкость: {AudioListener.volume}");
+        YG2.saves.volumeSetting = volume;
+        YG2.SaveProgress();
     }
 }
