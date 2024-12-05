@@ -84,6 +84,7 @@ PlayerSettings:
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
+  audioSpatialExperience: 0
   deferSystemGesturesMode: 0
   hideHomeButton: 0
   submitAnalytics: 1
@@ -808,7 +809,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Standalone: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2;Storage_yg;Authorization_yg;Localization_yg;AutoTranslateLangs_yg;NJSON_YG2
-    WebGL: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2
+    WebGL: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2;NJSON_YG2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
