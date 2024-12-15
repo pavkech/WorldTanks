@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using YG;
 
 namespace ChobiAssets.PTM
 {
@@ -96,7 +97,7 @@ namespace ChobiAssets.PTM
                     newName = newName.Replace("_00_", "_01_");
                     break;
             }
-            
+            YG2.InterstitialAdvShow();
             // Load the scene.
             SceneManager.LoadSceneAsync(newName);
 

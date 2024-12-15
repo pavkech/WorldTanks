@@ -809,7 +809,7 @@ PlayerSettings:
   webGLPowerPreference: 2
   scriptingDefineSymbols:
     Standalone: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2;Storage_yg;Authorization_yg;Localization_yg;AutoTranslateLangs_yg;NJSON_YG2
-    WebGL: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2;NJSON_YG2
+    WebGL: PLUGIN_YG_2;YandexGamesPlatform_yg;TMP_YG2;NJSON_YG2;AutoTranslateLangs_yg;Localization_yg;Storage_yg;Authorization_yg;InterstitialAdv_yg
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
