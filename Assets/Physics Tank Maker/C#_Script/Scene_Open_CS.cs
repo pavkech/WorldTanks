@@ -23,6 +23,8 @@ namespace ChobiAssets.PTM
         public void Button_Push()
         { // Called from the button.
             // Disable all the button in the scene.
+            YG2.InterstitialAdvShow();
+
             Button thisButton = GetComponent<Button>();
             thisButton.enabled = false;
             Button[] buttons = FindObjectsOfType<Button>();
@@ -97,7 +99,7 @@ namespace ChobiAssets.PTM
                     newName = newName.Replace("_00_", "_01_");
                     break;
             }
-            YG2.InterstitialAdvShow();
+            
             // Load the scene.
             SceneManager.LoadSceneAsync(newName);
 
